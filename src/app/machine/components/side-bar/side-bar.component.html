@@ -1,0 +1,20 @@
+<div class="w-full flex justify-evenly">
+  <app-link link="/" [exact]="true">Home</app-link>
+  <button [matMenuTriggerFor]="menu" aria-label="Menu Trigger">
+    <app-link link="/machines" [skip]="true">Machines</app-link>
+  </button>
+  <mat-menu #menu="matMenu">
+    <app-link link="/machines" [exact]="true">All</app-link>
+    <app-link link="/machines/editor/0" [exact]="true">Ajouter</app-link>
+    <app-link link="/machines/details/10" [exact]="true">Details</app-link>
+  </mat-menu>
+  <button [matMenuTriggerFor]="menuRoom" aria-label="Menu Trigger">
+    <app-link link="/rooms" [skip]="true">Rooms</app-link>
+  </button>
+  <mat-menu #menuRoom="matMenu">
+    <app-link link="/rooms" [exact]="true">All</app-link>
+    <app-link link="/rooms/editor/0" [exact]="true">Ajouter</app-link>
+    <app-link link="/rooms/details/10" [exact]="true">Details</app-link>
+  </mat-menu>
+  <app-link link="/machinchouette">Any Other</app-link>
+</div>

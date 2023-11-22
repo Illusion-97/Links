@@ -1,0 +1,9 @@
+<a
+  [routerLink]="link"
+  class="side-links block hover:shadow-md px-1 py-2 my-1 text-sm font-semibold text-sky-800 bg-transparent rounded-lg hover:text-white focus:text-white hover:bg-blue-400 focus:bg-blue-400 focus:outline-none focus:shadow-outline"
+  routerLinkActive="text-white bg-blue-400"
+  [routerLinkActiveOptions]="{exact: exact}"
+  [class.pointer-events-none]="skip"
+>
+  <ng-content></ng-content>
+</a>
